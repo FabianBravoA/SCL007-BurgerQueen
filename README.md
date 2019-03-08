@@ -1,6 +1,7 @@
 # Burger Queen
 
-## Preámbulo
+## Planificación 
+> Se configura eslint y prettier.
 
 Nos acaban de enviar un correo con una solicitud para un nuevo proyecto. Hay un
 restaurante que nos ha contactado porque quieren que alguien les construya una

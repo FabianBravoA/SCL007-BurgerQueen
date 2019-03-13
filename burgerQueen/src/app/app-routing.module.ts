@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/common';
 
-import { WaiterComponent } from '../app/waiter/waiter.component';
+import { WaiterComponent } from './waiter/breakfastwaiter.component';
 @NgModule({
   exports: [RouterModule]
 })

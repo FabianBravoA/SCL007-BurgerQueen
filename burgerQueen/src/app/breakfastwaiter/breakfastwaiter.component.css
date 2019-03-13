@@ -1,0 +1,7 @@
+.breakfast-view {
+  padding: 24px;
+  background-color: blueviolet;
+  margin: 10px 0px;
+  border-radius: 10px;
+  display: flex;
+}

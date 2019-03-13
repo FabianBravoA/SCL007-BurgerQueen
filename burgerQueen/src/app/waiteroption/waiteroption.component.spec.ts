@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WaiterComponent } from './waiter.component';
+import { WaiteroptionComponent } from './waiteroption.component';
 
-describe('WaiterComponent', () => {
-  let component: WaiterComponent;
-  let fixture: ComponentFixture<WaiterComponent>;
+describe('WaiteroptionComponent', () => {
+  let component: WaiteroptionComponent;
+  let fixture: ComponentFixture<WaiteroptionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WaiterComponent ]
+      declarations: [ WaiteroptionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WaiterComponent);
+    fixture = TestBed.createComponent(WaiteroptionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

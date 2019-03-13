@@ -3,6 +3,6 @@ export class Client {
   name: string;
 }
 export class Comanda {
-  product: string;
+  name: string;
   price: number;
 }

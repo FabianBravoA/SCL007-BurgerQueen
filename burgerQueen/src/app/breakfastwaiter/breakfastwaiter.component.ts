@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Comanda, Client } from './breakfastwaiter';
+import { PRODUCTS } from '../breakfastlist';
 
 @Component({
   selector: 'app-breakfast-waiter',
@@ -11,18 +12,15 @@ export class WaiterComponent implements OnInit {
     id: 1,
     name: ''
   };
-  addProduct: Comanda;
+
+  products = PRODUCTS;
+  comandaSelected: Comanda;
+
   onSelect(comanda: Comanda): void {
-    console.log('Click');
-    console.log(this.addProduct);
-    this.addProduct = comanda;
+    this.comandaSelected = comanda;
   }
 
   constructor() {}
 
   ngOnInit() {}
 }
-// export class ComandaList {
-//   selected
-//   products : any []
-// }

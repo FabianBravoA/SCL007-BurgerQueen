@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WaiteroptionComponent } from './waiteroption.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('WaiteroptionComponent', () => {
   let component: WaiteroptionComponent;
@@ -8,9 +9,9 @@ describe('WaiteroptionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WaiteroptionComponent ]
-    })
-    .compileComponents();
+      declarations: [WaiteroptionComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

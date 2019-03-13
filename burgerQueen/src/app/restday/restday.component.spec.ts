@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RestdayComponent } from './restday.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('RestdayComponent', () => {
   let component: RestdayComponent;
@@ -8,9 +9,9 @@ describe('RestdayComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RestdayComponent ]
-    })
-    .compileComponents();
+      declarations: [RestdayComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

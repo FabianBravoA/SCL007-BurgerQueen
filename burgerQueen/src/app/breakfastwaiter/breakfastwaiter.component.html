@@ -1,21 +1,22 @@
 <div>
-  <a [routerLink]="['/breakfast']"><span>Desayuno</span></a>
+  <a routerLink="['/breakfast']"><span>Desayuno</span></a>
 </div>
 <div>
-  <a [routerLink]="['/restday']"><span>Resto del día</span></a>
+  <a routerLink="['/restday']"><span>Resto del día</span></a>
 </div>
 
-<label>Nombre Cliente <input [(ngModel)]="client.name" placeholder="Nombre Cliente" /> </label>
+<div>
+  <label>Nombre Cliente <input [(ngModel)]="client.name" placeholder="Nombre Cliente" /> </label>
+</div>
 
 <div class="container">
   <div class="row">
     <div class="col s6">
-      <span class="breakfast-view text" name="{{ americanCofee }}" (click)="selected()"
-        >Café americano $500</span
-      >
-      <span class="breakfast-view text">Café con leche $700</span>
-      <span class="breakfast-view text">Sandwich de jamón y queso $1.000</span>
-      <span class="breakfast-view text">Jugo natural $700</span>
+      <ul class="heroes">
+        <li *ngFor="let product of products" (click)="onSelect(product)">
+          <span class="breakfast-view text">{{ product.name }} $ {{ product.price }} </span>
+        </li>
+      </ul>
     </div>
     <div class="col s6 comanda-view">
       <div class="divider"></div>

@@ -12,13 +12,13 @@ import { WaiteroptionComponent } from './waiteroption/waiteroption.component';
 import { RestdayComponent } from './restday/restday.component';
 
 const routes: Routes = [
-  { path: 'breakfast', component: WaiterComponent },
-  { path: 'chef', component: ChefComponent },
   { path: 'index', component: MenuComponent },
   { path: 'option', component: WaiteroptionComponent },
+  { path: 'chef', component: ChefComponent },
   { path: 'restday', component: RestdayComponent },
-  { path: '', component: MenuComponent, pathMatch: 'full' },
-  { path: '**', redirectTo: '/', pathMatch: 'full' }
+  { path: 'breakfast', component: WaiterComponent },
+  { path: '**', redirectTo: '/', pathMatch: 'full' },
+  { path: '', component: MenuComponent, pathMatch: 'full' }
 ];
 
 @NgModule({

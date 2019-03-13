@@ -5,22 +5,40 @@
   <a [routerLink]="['/restday']"><span>Resto del día</span></a>
 </div>
 
-<label>Nombre Cliente <input [(ngModel)]="comanda.name" placeholder="Nombre Cliente" /> </label>
+<label>Nombre Cliente <input [(ngModel)]="client.name" placeholder="Nombre Cliente" /> </label>
 
 <div class="container">
   <div class="row">
     <div class="col s6">
-      <span class="breakfast-view">Café americano $500</span>
-      <span class="breakfast-view">Café con leche $700</span>
-      <span class="breakfast-view">Sandwich de jamón y queso $1.000</span>
-      <span class="breakfast-view">Jugo natural $700</span>
+      <span class="breakfast-view text" name="{{ americanCofee }}" (click)="selected()"
+        >Café americano $500</span
+      >
+      <span class="breakfast-view text">Café con leche $700</span>
+      <span class="breakfast-view text">Sandwich de jamón y queso $1.000</span>
+      <span class="breakfast-view text">Jugo natural $700</span>
     </div>
-    <div class="col s6">
-      <span class="flow-text">Cosas seleccionadas</span>
+    <div class="col s6 comanda-view">
+      <div class="divider"></div>
+      <div class="section">
+        Pedido de:<span class="flow-text text"> {{ client.name }}</span>
+      </div>
+      <div class="divider"></div>
+      <div class="section">
+        <div class="chip">
+          Tag
+          <i class="close material-icons">close</i>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="section">
+        <span class="flow-text text">Total: $</span>
+        <span></span>
+      </div>
     </div>
+
     <div class="col s12">Jus for i don't know!</div>
   </div>
 </div>
 
-<div><span>id: </span>{{ comanda.id }}</div>
-<div><span>name: </span>{{ comanda.name }}</div>
+<div><span>id: </span>{{ client.id }}</div>
+<div><span>name: </span> {{ client.name }}</div>

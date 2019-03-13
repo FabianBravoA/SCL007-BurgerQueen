@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Comanda } from './breakfastwaiter';
+import { Component, OnInit, Input } from '@angular/core';
+import { Comanda, Client } from './breakfastwaiter';
 
 @Component({
   selector: 'app-breakfast-waiter',
@@ -7,11 +7,22 @@ import { Comanda } from './breakfastwaiter';
   styleUrls: ['./breakfastwaiter.component.css']
 })
 export class WaiterComponent implements OnInit {
-  comanda: Comanda = {
+  client: Client = {
     id: 1,
     name: ''
   };
+  addProduct: Comanda;
+  onSelect(comanda: Comanda): void {
+    console.log('Click');
+    console.log(this.addProduct);
+    this.addProduct = comanda;
+  }
+
   constructor() {}
 
   ngOnInit() {}
 }
+// export class ComandaList {
+//   selected
+//   products : any []
+// }

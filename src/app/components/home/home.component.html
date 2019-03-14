@@ -1,22 +1,24 @@
-<section class="mt-5">
-        <h2>Comandas Pendientes</h2>
-        <div id="books" class="mt-5">
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let command of commands">
-                  <div class="card_book">
-                    <div class="card">
-                      <div class="card-body text-center">
-                        <p></p>
-                      </div>
-                        <a class="btn btn-block btn-primary" target="_blank">Terminar</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-</section>
-
-
+<section class="mt-5 pt-3" *ngIf="commands.length > 0; else noCommands">
+    <h2>Comandas Pendientes</h2>
+    <div *ngFor="let command of commands; index as i">
+      <div class="card" style="width: 16rem;">
+        <div class="card-body" >
+          <h5 class="card-text">Comanda Nª {{i+1}}</h5>
+          <h5 class="card-text">Nombre Cliente: {{command.nameClient}}</h5>
+          <p class="card-text">Número de Mesa: {{command.tableNumber}}</p>
+          <p class="card-text">Mesero: {{command.user}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">product 1</li>
+          <li class="list-group-item">Product 2</li>
+          <li class="list-group-item">product 3</li>
+        </ul>
+        <div class="card-body">
+          <p class="card-text">Estado: {{command.state}}</p>
+        </div>
+      </div>
+    </div>  
+  </section>
+  <ng-template #noCommands>
+    <p>No hay comandas pendientes o creadas</p>
+  </ng-template>

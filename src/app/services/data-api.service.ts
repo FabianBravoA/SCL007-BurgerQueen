@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { CommandInterface  } from '../models/command';
+import { ProductInterface } from '../models/products'
 import { Observable  } from 'rxjs/internal/Observable';
 import { map } from 'rxjs/operators';
 
@@ -12,11 +13,13 @@ export class DataApiService {
   constructor(private afs:AngularFirestore) {
     this.commandCollection = afs.collection<CommandInterface>('commands');
     this.commands = this.commandCollection.valueChanges();
+
   }
     private commandCollection: AngularFirestoreCollection<CommandInterface>;
     private commands: Observable<CommandInterface[]>;
     private commandDoc: AngularFirestoreDocument<CommandInterface>;
     private command: Observable<CommandInterface>;
+
   getAllCommands(){
       return this.commands = this.commandCollection.snapshotChanges()
       .pipe(map( changes =>{

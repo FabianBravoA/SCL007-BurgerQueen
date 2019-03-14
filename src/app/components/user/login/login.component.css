@@ -1,7 +1,28 @@
-
 .form-control.login-user {
     border: 0 solid #fff !important;
   }
-  #login{
-    margin-top:30px;
+.background-index{
+    background: url('../../../../assets/burgerqueenbackground.jpg');
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    min-height: 100%;
+    position: fixed;
+    left: 0;
+    top:0;
+  }
+  .transparent{
+    background-color: rgba(255,255,255,.3);
+  }
+  .transparent-total{
+    background-color: rgba(255,255,255,0) !important;
+    border:none !important;
+  }
+  .space-developer{
+    width:100%;
+    min-height: 100px;
+  }
+  .space-developer img{
+    margin: 0 auto; 
+    display:block;
   }

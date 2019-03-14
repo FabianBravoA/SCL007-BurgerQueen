@@ -1,12 +1,15 @@
-<section id="login" class="mb-5 mt-10">
+<section id="login" class="mb-5 mt-5 pt-5 background-index">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+      <div class="space-developer">
+        <img src="../../../../assets/favicon.png" alt="logoburgerqueen"/>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 mx-auto transparent">
         <div class="card_login">
-          <div class="card">
+          <div class="card transparent-total">
             <div class="card-body text-center">
               <form #formLogin="ngForm" (submit)="onLogin()">
-                <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">Login</h1>
+                <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">Ingresa</h1>
                 <div class="alert alert-danger" role="alert" *ngIf="isError">
                   Ha ocurrido un error, intentalo de nuevo.
                 </div>
@@ -19,7 +22,7 @@
                   type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>
                 </div>
                 <button 
-                type="submit" class="btn btn-lg btn-primary btn-block">Entrar</button>                </form>
+                type="submit" class="btn btn-lg btn-warning btn-block">Entrar</button>                </form>
             </div>
           </div>
         </div>

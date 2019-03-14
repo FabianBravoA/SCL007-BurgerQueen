@@ -13,11 +13,6 @@ export class WaiterComponent implements OnInit {
   constructor(private dataApi: DataApiService) { }
   private commands: CommandInterface = {};
   ngOnInit() {
-    this.getListCommands();
-  }
-  getListCommands(){
-    this.dataApi.getAllCommands().subscribe(commands => {
-      
-    });
   }
 }
+

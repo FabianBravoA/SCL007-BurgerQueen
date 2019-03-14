@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  font-family: 'Sniglet' !important;
+  background-image: url('../src/assets/aplicationburgerqueen.jpg');
+  background-position: center;
+  background-size: cover;
+  width:100%;
+  min-height: 100%;
+  position: fixed;
+  left: 0;
+  top:0; 
+}

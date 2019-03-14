@@ -1,0 +1,10 @@
+.background-index{
+  background: url('../../../assets/burgerqueenbackground.jpg');
+  background-position: center;
+  background-size: cover;
+  width:100%;
+  min-height: 100%;
+  position: fixed;
+  left: 0;
+  top:0;
+}

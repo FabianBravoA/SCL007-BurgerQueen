@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private dataApi: DataApiService) { }
   public commands = [];
   public command = '';
+  
   ngOnInit() {
     this.dataApi.getAllCommands().subscribe(commands =>{
       console.log('Comandas', commands);

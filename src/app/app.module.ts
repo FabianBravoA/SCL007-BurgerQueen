@@ -11,7 +11,8 @@ import { WaiterComponent } from './components/waiter/waiter.component';
 import { ChefComponent } from './components/chef/chef.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { BreakfeastComponent } from './components/breakfeast/breakfeast.component';
+import { RestofthedayComponent } from './components/restoftheday/restoftheday.component';
 
 import { environment } from '../environments/environment';
 
@@ -20,6 +21,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { FormsModule } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { IndexComponent } from './components/index/index.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,10 @@ import { AngularFirestore } from '@angular/fire/firestore';
     WaiterComponent,
     ChefComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    BreakfeastComponent,
+    RestofthedayComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,

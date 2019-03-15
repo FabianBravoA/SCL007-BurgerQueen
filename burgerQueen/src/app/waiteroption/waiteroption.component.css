@@ -1,3 +1,26 @@
 .lines {
   border-bottom: 3px solid #009688;
+  display: flex;
+  /* margin: 15px 20px; */
 }
+
+.menu {
+  margin: 15px auto;
+}
+/* .menu {
+  border: solid 2px blue;
+  border-radius: 5px;
+  max-width: 150px;
+  display: inline-block;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 32px;
+  border-radius: 16px;
+  background-color: #264653;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  max-width: 150px;
+  padding: 50px;
+} */

@@ -25,3 +25,7 @@
 .lines {
   border-bottom: 3px solid #009688;
 }
+
+.menu {
+  margin: 15px auto;
+}

@@ -38,7 +38,7 @@ export class DataApiService {
   this.commandDoc = this.afs.doc<CommandInterface>(`commands/${idCommand}`);
   this.commandDoc.update(command);
 }
-  deleteCommandOrProducts(idCommand: string):void{
+  deleteCommand(idCommand: string):void{
     this.commandDoc = this.afs.doc<CommandInterface>(`commands/${idCommand}`);
     this.commandDoc.delete();
   }

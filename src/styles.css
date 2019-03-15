@@ -5,8 +5,8 @@ body{
   background-position: center;
   background-size: cover;
   width:100%;
-  min-height: 100%;
-  position: fixed;
+  height:auto;
   left: 0;
   top:0; 
+  color:#fff !important;
 }

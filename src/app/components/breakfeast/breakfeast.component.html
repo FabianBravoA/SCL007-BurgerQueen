@@ -1,45 +1,34 @@
-<section class="mt-5 pt-2">
+<section class="container mt-5 pt-2">
     <div class="row">
-        <div class="col-6">
-          <div class="row">
-            <div class="col-12">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Agrega o edita una comanda</h5>
-                        </div>
-                        <div class="modal-body">
-                            <form name="formBook" #formBook="ngForm" (ngSubmit)="onSaveBook(formBook)">
-                                <input type="hidden" name="id" >
-                                <input type="hidden" name="userUid" [value]="userUid">
-                                <div class="form-group">
-                                  <label for="titulo" class="col-form-label">Nombre de Cliente:</label>
-                                  <input type="text" class="form-control" name="titulo">
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="precio">Nº de Mesa</label>
-                                        <input type="text" name="mesa" class="form-control" placeholder="2">
-                                      </div>
-                                      <div class="form-group col-md-6">
-                                        <label for="precio">Mesero:</label>
-                                        <input type="text" name="mesa" class="form-control" placeholder="Javier Orellana">
-                                      </div>
-                                      <div class="form-group col-md-6">
-                                        <label for="idioma">Idioma</label>
-                                        <select name="idioma" class="form-control">
-                                          <option>Inglés</option>
-                                          <option >Castellano</option>
-                                        </select>
-                                      </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-          </div>        
+        <div class="col-12">
+          <app-form-commandb></app-form-commandb>
         </div>
+        
     </div>
   </section>
+  <table class="table table-sm table-dark mt-5">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Cliente</th>
+          <th scope="col">Mesa</th>
+          <th scope="col">Productos</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Mesero</th>
+          <th scope="col">Total</th>
+          <th scope="col">Total + Propina</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let command of commands; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{command.nameClient}}</td>
+          <td>{{command.tableNumber}}</td>
+          <td>{{command.products}}</td>
+          <td>{{command.state}}</td>
+          <td>{{command.user}}</td>
+          <td></td>
+          <td></td>
+        </tr>      
+      </tbody>
+    </table>

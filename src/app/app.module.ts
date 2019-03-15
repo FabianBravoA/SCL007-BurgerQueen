@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { Page404Component } from './components/page404/page404.component';
-import { ProductsComponent } from './components/products/products.component';
 import { WaiterComponent } from './components/waiter/waiter.component';
 import { ChefComponent } from './components/chef/chef.component';
 import { HomeComponent } from './components/home/home.component';
@@ -21,7 +20,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { FormsModule } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { IndexComponent } from './components/index/index.component';
+import { ListCommandsComponent } from './components/list-commands/list-commands.component';
+import { FormCommandbComponent } from './components/form-commandb/form-commandb.component';
+import { FormCommandrComponent } from './components/form-commandr/form-commandr.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +30,15 @@ import { IndexComponent } from './components/index/index.component';
     LoginComponent,
     ProfileComponent,
     Page404Component,
-    ProductsComponent,
     WaiterComponent,
     ChefComponent,
     HomeComponent,
     NavbarComponent,
     BreakfeastComponent,
     RestofthedayComponent,
-    IndexComponent
+    ListCommandsComponent,
+    FormCommandbComponent,
+    FormCommandrComponent
   ],
   imports: [
     BrowserModule,

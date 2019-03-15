@@ -1,0 +1,44 @@
+<div class="row mt5 pt-5">
+    <div class="col-12">
+        <div  role="document">
+            <div class="modal-content transparent-developer">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agrega o edita una comanda</h5>
+                </div>
+                <form name="commands" #formCommand="ngForm" (ngSubmit)="addCommand()">
+                <div class="row">
+                  <div class="col-6">
+                      <input type="hidden" name="id" >
+                      <input type="hidden" name="userUid" [value]="userUid">
+                      <div class="form-group">
+                        <label for="titulo" class="col-form-label">Nombre de Cliente:</label>
+                        <input type="text" class="form-control" name="nameClient" [(ngModel)]="command.nameClient">
+                      </div>
+                      <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="precio">Nº de Mesa</label>
+                              <input type="text" name="tableNumber" [(ngModel)]="command.tableNumber" class="form-control" placeholder="2">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="precio">Mesero:</label>
+                              <input type="text" name="user" [(ngModel)]="command.user" class="form-control" placeholder="Javier Orellana">
+                            </div>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <label for="idioma">Productos</label>
+                      <select name="products" class="form-control" [(ngModel)]="command.products" multiple>
+                        <option value="Cafe con Leche $ 700">Cafe con Leche $ 700</option>
+                        <option value="Cafe Americano  $ 500">Cafe Americano  $ 500</option>
+                        <option value="Jugo Natural $ 700">Jugo Natural $ 700 </option>
+                        <option value="Sandwich de Jamon y Queso$ 1000">Sandwich de Jamon y Queso$ 1000</option>
+                      </select>                  
+                  <button type="submit" >Enviar</button>
+                  </div>
+                </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+  </div> 

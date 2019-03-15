@@ -2,7 +2,9 @@ export interface CommandInterface{
   id?: string;
   user?: string;
   nameClient?: string;
-  tableNumber?: string;
+  tableNumber?: number;
   timeProcess?: number;
-  state?: boolean;
+  state?: false;
+  products?: [];
+  userUid?:string;
 }

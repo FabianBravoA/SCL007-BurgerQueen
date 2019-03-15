@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'chef', component: ChefComponent },
   { path: 'restday', component: RestdayComponent },
   { path: 'breakfast', component: WaiterComponent },
+  { path: 'comandas', component: ComandasComponent },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
   { path: '', component: MenuComponent, pathMatch: 'full' }
 ];

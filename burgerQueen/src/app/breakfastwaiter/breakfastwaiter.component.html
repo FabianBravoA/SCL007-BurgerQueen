@@ -1,34 +1,43 @@
-<div>
-  <a routerLink="/breakfast"><span>Desayuno</span></a>
-</div>
-<div>
-  <a routerLink="/restday"><span>Resto del día</span></a>
-</div>
-
-<div>
-  <label>Nombre Cliente <input [(ngModel)]="client.name" placeholder="Nombre Cliente" /> </label>
+<div class="lines">
+  <div>
+    <a routerLink="/breakfast"
+      ><span><i class="close material-icons">free_breakfast</i>Desayuno</span></a
+    >
+  </div>
+  <div>
+    <a routerLink="/restday"
+      ><span><i class="close material-icons">fastfood</i>Resto del día</span></a
+    >
+  </div>
+  <div>
+    <a routerLink="/comandas"
+      ><span><i class="close material-icons">restaurant_menu</i>Comandas</span></a
+    >
+  </div>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col s6">
-      <ul class="heroes">
-        <li *ngFor="let product of products" (click)="onSelect(product)">
-          <span class="breakfast-view text">{{ product.name }} $ {{ product.price }} </span>
+      <ul>
+        <li
+          *ngFor="let comanda of comandas"
+          [class.selected]="comanda === selectedComanda"
+          (click)="onSelect(comanda)"
+        >
+          <span class="breakfast-view text">{{ comanda.name }} $ {{ comanda.price }} </span>
         </li>
       </ul>
     </div>
+
     <div class="col s6 comanda-view">
-      <div class="divider"></div>
-      <div class="section">
-        Pedido de:<span class="flow-text text"> {{ client.name }}</span>
+      <div>
+        <label>
+          <input [(ngModel)]="client.name" placeholder="Nombre Cliente" />
+        </label>
       </div>
-      <div class="divider"></div>
       <div class="section">
-        <div class="chip">
-          Tag
-          <i class="close material-icons">close</i>
-        </div>
+        <app-orderdetail [comanda]="selectedComanda"></app-orderdetail>
       </div>
       <div class="divider"></div>
       <div class="section">

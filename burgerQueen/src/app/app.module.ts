@@ -1,6 +1,7 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { WaiterComponent } from './breakfastwaiter/breakfastwaiter.component';
@@ -10,7 +11,7 @@ import { ComandasComponent } from './comandas/comandas.component';
 import { MenuComponent } from './menu/menu.component';
 import { WaiteroptionComponent } from './waiteroption/waiteroption.component';
 import { RestdayComponent } from './restday/restday.component';
-import { AppRoutingModule } from './app-routing.module';
+import { OrderdetailComponent } from './orderdetail/orderdetail.component';
 
 @NgModule({
   declarations: [
@@ -21,9 +22,10 @@ import { AppRoutingModule } from './app-routing.module';
     ComandasComponent,
     MenuComponent,
     WaiteroptionComponent,
-    RestdayComponent
+    RestdayComponent,
+    OrderdetailComponent
   ],
-  imports: [AppRoutingModule, BrowserModule, FormsModule],
+  imports: [FormsModule, AppRoutingModule, BrowserModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

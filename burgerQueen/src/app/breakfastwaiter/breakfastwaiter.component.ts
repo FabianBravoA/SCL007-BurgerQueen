@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Comanda, Client } from './breakfastwaiter';
-import { PRODUCTS } from '../breakfastlist';
+import { COMANDAS } from '../breakfastlist';
+import * as M from 'src/assets/materialize/js/materialize.min.js';
+import { ComandasComponent } from '../comandas/comandas.component';
 
 @Component({
   selector: 'app-breakfast-waiter',
@@ -13,11 +15,13 @@ export class WaiterComponent implements OnInit {
     name: ''
   };
 
-  products = PRODUCTS;
-  comandaSelected: Comanda;
-
+  comandas = COMANDAS;
+  selectedComanda: Comanda;
+  clientSelected: Client;
+  orders: string[];
   onSelect(comanda: Comanda): void {
-    this.comandaSelected = comanda;
+    this.selectedComanda = comanda;
+    // this.selectedComanda = this.orders.push;
   }
 
   constructor() {}

@@ -1,15 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { WaiterComponent } from './breakfastwaiter.component';
-import { FormsModule } from '@angular/forms';
 
 describe('WaiterComponent', () => {
   let component: WaiterComponent;
   let fixture: ComponentFixture<WaiterComponent>;
+  let input: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [WaiterComponent]
+      declarations: [WaiterComponent],
+      imports: [FormsModule],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
   }));
 
@@ -23,7 +27,9 @@ describe('WaiterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('debe devolver nombre del cliente ingresado en comanda', () => {
-    expect(component.client).toContain('Daniela');
+  it('should show name client', () => {
+    fixture = TestBed.createComponent(WaiterComponent);
+    component = fixture.componentInstance;
+    input = fixture.nativeElement.querySelector('input');
   });
 });

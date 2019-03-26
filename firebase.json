@@ -10,7 +10,7 @@
     "source": "functions"
   },
   "hosting": {
-    "public": "src",
+    "public": "dist/burguerQueen",
     "ignore": [
       "firebase.json",
       "**/.*",

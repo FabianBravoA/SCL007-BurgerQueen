@@ -4,7 +4,11 @@ export interface CommandInterface{
   nameClient?: string;
   tableNumber?: number;
   timeProcess?: number;
-  state?: false;
-  products?: [];
+  state?: boolean;
+  products?: [{
+    name?: string,
+    price?: number,
+    idproducts?: string
+  }];
   userUid?:string;
 }

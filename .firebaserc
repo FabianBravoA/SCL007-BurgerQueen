@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "burguerqueen-3abec"
+    "default": "burguerqueen-3abec",
+    "BurgerQueen": "burguerqueen-3abec"
   }
 }

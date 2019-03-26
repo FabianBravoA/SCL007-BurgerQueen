@@ -2,17 +2,14 @@
   <div class="container">
     <div class="row">
       <div class="space-developer">
-        <img src="../../../../assets/favicon.png" alt="logoburgerqueen"/>
+          <i class="fas fa-hamburger"></i>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4 mx-auto transparent">
         <div class="card_login">
           <div class="card transparent-total">
             <div class="card-body text-center">
               <form #formLogin="ngForm" (submit)="onLogin()">
-                <h1 class="h3 mb-3 font-weight-normal" *ngIf="!isError">Ingresa</h1>
-                <div class="alert alert-danger" role="alert" *ngIf="isError">
-                  Ha ocurrido un error, intentalo de nuevo.
-                </div>
+                <h1 class="h3 mb-3 font-weight-normal">Ingresa</h1>
                 <div class="form-group">
                   <input [(ngModel)] ="email"
                   type="email" id="email" name="email" class="form-control" placeholder="Email" required>
@@ -22,7 +19,7 @@
                   type="password" id="password" name="password" class="form-control" placeholder="Contraseña" required>
                 </div>
                 <button 
-                type="submit" class="btn btn-lg btn-warning btn-block">Entrar</button>                </form>
+                type="submit" class="btn btn-lg btn-warning btn-block">Entrar</button></form>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {OrderModule} from 'ngx-order-pipe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BreakfeastComponent } from './components/breakfeast/breakfeast.component';
 import { RestofthedayComponent } from './components/restoftheday/restoftheday.component';
 
-import { environment } from '../environments/environment';
+//import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -41,6 +43,7 @@ import { FormCommandrComponent } from './components/form-commandr/form-commandr.
     FormCommandrComponent
   ],
   imports: [
+    OrderModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

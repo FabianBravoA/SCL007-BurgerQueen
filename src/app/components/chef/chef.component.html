@@ -1,3 +1,16 @@
-<p>
-  chef works!
-</p>
+<section class="mt-5 pt-3">
+  <div class="init">
+      <h2 class="mt-5 space">Tus Comandas Pendientes</h2>   
+  </div>    
+    <div class="row">
+        <div class="card-columns">
+            <div class="card center" *ngFor="let command of commands | orderBy:'order':false; index as i">
+              <p class="card-text">Número de Mesa: {{command.tableNumber}}</p> <!-- Se deja numero de mesa para tener conocimiento que mesa es el pedido para avisar que esta ok si es que el mesero no la viene a buscar. Se elimina nombre para evitar problemas y nombre del cliente no es relevante para el chef -->
+              <ul class="list-group list-group-flush" *ngFor="let p of command.products; index as j">
+                <li class="list-group-item products">{{p.quantity}} - {{p.product}}</li> <!-- Precio no es necesario mostrar -->
+              </ul>
+              <p class="card-text"><small class="text-muted">Ingresado el: {{command.date}}</small></p>
+            </div>
+        </div>
+    </div>
+  </section>

@@ -5,30 +5,4 @@
         </div>
         
     </div>
-  </section>
-  <table class="table table-sm table-dark mt-5">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Cliente</th>
-          <th scope="col">Mesa</th>
-          <th scope="col">Productos</th>
-          <th scope="col">Estado</th>
-          <th scope="col">Mesero</th>
-          <th scope="col">Total</th>
-          <th scope="col">Total + Propina</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let command of commands; index as i">
-          <th scope="row">{{i+1}}</th>
-          <td>{{command.nameClient}}</td>
-          <td>{{command.tableNumber}}</td>
-          <td>{{command.products}}</td>
-          <td>{{command.state}}</td>
-          <td>{{command.user}}</td>
-          <td></td>
-          <td></td>
-        </tr>      
-      </tbody>
-    </table>
+</section>

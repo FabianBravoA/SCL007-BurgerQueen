@@ -22,17 +22,8 @@
                               <label for="precio">Mesero:</label>
                               <input type="text" name="user" [(ngModel)]="command.user" class="form-control" placeholder="Javier Orellana">
                             </div>
+                            <button type="button" class="btn btn-warning space-button" *ngFor="let p of breakfeastList; index as i">{{p.product}} - $ {{p.price}}</button>
                       </div>
-                  </div>
-                  <div class="col-6">
-                      <label for="idioma">Productos</label>
-                      <select name="products" class="form-control" [(ngModel)]="command.products" multiple>
-                        <option value="Cafe con Leche $ 700">Cafe con Leche $ 700</option>
-                        <option value="Cafe Americano  $ 500">Cafe Americano  $ 500</option>
-                        <option value="Jugo Natural $ 700">Jugo Natural $ 700 </option>
-                        <option value="Sandwich de Jamon y Queso$ 1000">Sandwich de Jamon y Queso$ 1000</option>
-                      </select>                  
-                  <button type="submit" >Enviar</button>
                   </div>
                 </div>
                 </form>

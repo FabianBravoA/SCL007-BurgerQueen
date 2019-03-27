@@ -11,6 +11,13 @@ export class FormCommandbComponent implements OnInit {
 
 command = {} as CommandInterface;
 
+breakfeastList: Array<any> = [
+  {product: 'Café con Leche', price: 700},
+  {product: 'café Americano', price: 500},
+  {product: 'Jugo Natural', price: 700},
+  {product: 'Sandwich de Jamón y Queso', price: 1000}
+];
+
   constructor(public dataApi: DataApiService) { }
 
   ngOnInit() {

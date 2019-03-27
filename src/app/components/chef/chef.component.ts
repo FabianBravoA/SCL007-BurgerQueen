@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataApiService } from '../../services/data-api.service';
 
 @Component({
   selector: 'app-chef',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChefComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+    constructor(private dataApi: DataApiService) { }
+    public commands = [];
+    public command = '';
+    
+    ngOnInit() {
+      this.dataApi.getAllCommands().subscribe(commands =>{
+        console.log('Comandas', commands);
+        this.commands = commands;
+      })
+    }
+  
   }
-
-}

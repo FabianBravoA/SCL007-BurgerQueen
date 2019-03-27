@@ -32,5 +32,11 @@ commands: any =[ {
     (this.commands).push(value);
     console.log(this.commands);
   }
+  delete(producto):void{
+    let answer = confirm('¿Seguro que quiere eliminar el producto?');
+    if(answer){
+      this.commands.splice(producto,1)
+    }
+  }
 
 }

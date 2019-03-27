@@ -5,3 +5,13 @@
 .space-button{
   margin: 10px;
 }
+.bg-developer{
+  background-color: rgba(98, 74, 155, .1) !important;
+  border-color: rgba(98, 74, 155, .3) !important;
+}
+.bg-product{
+  background-color: rgba(98, 74, 155, .2);
+}
+.response{
+  color: #604c8d;
+}

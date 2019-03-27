@@ -25,3 +25,17 @@
     margin: 0 auto; 
     display:block;
   }
+  .hamburger{
+    background: -webkit-linear-gradient(#ffc107, #604c8d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:150px;
+    text-align:center;
+    color: tomato;  
+    margin: 0 auto; 
+    display: block;
+  }
+  .title{
+    font-weight: 600;
+    color: #604c8d;
+  }

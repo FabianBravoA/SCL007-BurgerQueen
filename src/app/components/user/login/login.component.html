@@ -2,14 +2,14 @@
   <div class="container">
     <div class="row">
       <div class="space-developer">
-          <i class="fas fa-hamburger"></i>
+          <i class="fas fa-hamburger hamburger"></i>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 mx-auto transparent">
+      <div class="col-xs-12 col-sm-6 col-md-8 mx-auto transparent">
         <div class="card_login">
           <div class="card transparent-total">
             <div class="card-body text-center">
               <form #formLogin="ngForm" (submit)="onLogin()">
-                <h1 class="h3 mb-3 font-weight-normal">Ingresa</h1>
+                <h1 class="h3 mb-3 title">Ingresa</h1>
                 <div class="form-group">
                   <input [(ngModel)] ="email"
                   type="email" id="email" name="email" class="form-control" placeholder="Email" required>

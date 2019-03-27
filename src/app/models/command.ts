@@ -6,9 +6,10 @@ export interface CommandInterface{
   timeProcess?: number;
   state?: boolean;
   products?: [{
-    name?: string,
+    product?: string,
     price?: number,
-    idproducts?: string
+    idproducts?: string,
+    quantity?: number
   }];
   userUid?:string;
 }

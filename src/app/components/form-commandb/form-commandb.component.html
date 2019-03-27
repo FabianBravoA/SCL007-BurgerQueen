@@ -22,8 +22,37 @@
                               <label for="precio">Mesero:</label>
                               <input type="text" name="user" [(ngModel)]="command.user" class="form-control" placeholder="Javier Orellana">
                             </div>
-                            <button type="button" class="btn btn-warning space-button" *ngFor="let p of breakfeastList; index as i">{{p.product}} - $ {{p.price}}</button>
+                            <button type="button" (click)="array(breakfast)" class="btn btn-warning space-button" *ngFor="let p of breakfeastList; index as i">{{p.product}} - $ {{p.price}}</button>
                       </div>
+                  </div>
+                  <div class="col-6">
+                    <form (ngSubmit)="addCommand">
+                      <table class="table bg-developer mt-3">
+                    
+                        <tr>
+                          <th>Nombre de Cliente:</th>
+                          <td class="response">{{command.nameClient}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="col">Nº de Mesa:  <span>{{command.tableNumber}}</span> </th>
+                          <th scope="col">Mesero: <span>{{command.user}}</span></th>
+                        </tr>
+                        <tr>
+                          <th scope="col">Producto</th>
+                          <th scope="col">Precio</th>
+                        </tr>
+                        <tr class="bg-product" *ngFor="let p of commands; let i = index">
+                          <td></td>
+                          <td class="response">{{p.product}}</td>
+                          <td class="response">{{p.price}}</td>
+                          <td><button class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button></td>
+                        </tr>
+                        <tr>
+                          <td><button class="btn btn-warning mt-3 mb-3" type="submit">Enviar a cocina</button></td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </form>
                   </div>
                 </div>
                 </form>

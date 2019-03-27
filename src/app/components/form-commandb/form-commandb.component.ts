@@ -9,6 +9,7 @@ import { CommandInterface } from 'src/app/models/command';
 })
 export class FormCommandbComponent implements OnInit {
 
+list: any;  
 command = {} as CommandInterface;
 
 breakfeastList: Array<any> = [
@@ -17,13 +18,19 @@ breakfeastList: Array<any> = [
   {product: 'Jugo Natural', price: 700},
   {product: 'Sandwich de Jamón y Queso', price: 1000}
 ];
-
+commands: any =[ {
+    
+}];
   constructor(public dataApi: DataApiService) { }
 
   ngOnInit() {
   }
   addCommand(){
-          this.dataApi.addCommand(this.command);
+    this.dataApi.addCommand(this.command);
+  }
+  array(value: any) {
+    (this.commands).push(value);
+    console.log(this.commands);
   }
 
 }

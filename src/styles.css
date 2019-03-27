@@ -42,6 +42,16 @@ body{
   font-weight: 600;
   font-family: 'Quicksand';
 }
+.btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-danger.dropdown-toggle:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+.btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active, .show > .btn-outline-danger.dropdown-toggle {
+  color: #fff;
+  background-color:transparent !important;
+  border-color: transparent !important;
+}
+
 /* #604c8d violeta
 rgb(240, 240, 240) rosa
 #333333 gris

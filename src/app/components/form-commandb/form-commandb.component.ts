@@ -27,6 +27,7 @@ commands: any =[ {
   }
   addCommand(){
     this.dataApi.addCommand(this.command);
+    alert('Comanda enviada a cocina Correctamente!')
   }
   array(value: any) {
     (this.commands).push(value);

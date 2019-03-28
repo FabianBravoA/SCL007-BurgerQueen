@@ -12,21 +12,28 @@
         <!--<li class="nav-item active" *ngIf="isLogged">
           <a class="nav-link" routerLink="waiter">Lista de Comandas</a>
         </li>-->
-        <li class="nav-item active" *ngIf="isLogged">
+        <li class="nav-item active" *ngIf="isWaiter == false && isLogged; else noOwner">
             <a class="nav-link" routerLink="breakfeast">Desayuno</a>
         </li>
-         <li class="nav-item active" *ngIf="isLogged">
+         <li class="nav-item active" *ngIf="isWaiter == false && isLogged; else noOwner">
             <a class="nav-link" routerLink="restoftheday">Resto del dia</a>
         </li>
-        <li class="nav-item active" *ngIf="isLogged">
+        <li class="nav-item active" *ngIf="isWaiter == true && isLogged; else noOwner">
           <a class="nav-link" routerLink="chef">ChefBoss</a>
         </li>
         <li class="nav-item active" *ngIf="!isLogged">
           <a class="nav-link" routerLink="">Ingresa</a>
         </li>
+        <li class="nav-item active" *ngIf="!isLogged">
+          <a class="nav-link" routerLink="user/register">Register</a>
+        </li>
         <li class="nav-item" *ngIf="isLogged">
           <a href="#" class="nav-link" (click)="onLogout()">Cerrar Sesion</a>
       </li>
+      <ng-template #noOwner>
+        <td>
+        </td>
+      </ng-template>
     </ul>
   </div>
 </nav>

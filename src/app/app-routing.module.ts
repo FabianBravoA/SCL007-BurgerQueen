@@ -11,9 +11,11 @@ import { BreakfeastComponent  } from './components/breakfeast/breakfeast.compone
 import { RestofthedayComponent  } from './components/restoftheday/restoftheday.component';
 import { FormCommandbComponent  } from './components/form-commandb/form-commandb.component';
 import { FormCommandrComponent } from './components/form-commandr/form-commandr.component';
+import { RegisterComponent  } from './components/user/register/register.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
+  {path: 'user/register', component: RegisterComponent},
   {path: 'home', component: HomeComponent},
   {path: 'waiter', component: WaiterComponent},
   {path: 'chef' , component: ChefComponent},

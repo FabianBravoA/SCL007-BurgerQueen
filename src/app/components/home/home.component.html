@@ -11,20 +11,18 @@
               <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
               </div>
-            </div>
-            
+            </div>           
           </div>
       </div>
-     
   </div>    
     <div class="row">
         <div class="card-columns">
-            <div class="card center" *ngFor="let command of commands | orderBy:'order':true; index as i">
+            <div class="card center" *ngFor="let command of commands | orderBy:'order':true; i as index">
               <h5 class="card-text">Nombre Cliente: {{command.nameClient}}</h5>
               <p class="card-text">Número de Mesa: {{command.tableNumber}}</p>
               <p class="card-text">Mesero: {{command.user}}</p>
-              <ul class="list-group list-group-flush" *ngFor="let p of command.products; index as j">
-                <li class="list-group-item products">{{p.quantity}} - {{p.product}} - ${{p.price}}</li>
+              <ul class="list-group list-group-flush" *ngFor="let g of command.products; let j = index">
+                <li class="list-group-item products">{{g.quantity}} - {{g.product}} - ${{g.price}}</li>
               </ul>
               <p>Total: </p>
               <p class="card-text"><small class="text-muted">Ingresado el: {{command.date}}</small></p>

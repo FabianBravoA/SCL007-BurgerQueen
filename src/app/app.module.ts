@@ -25,6 +25,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { ListCommandsComponent } from './components/list-commands/list-commands.component';
 import { FormCommandbComponent } from './components/form-commandb/form-commandb.component';
 import { FormCommandrComponent } from './components/form-commandr/form-commandr.component';
+import { RegisterComponent } from './components/user/register/register.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { FormCommandrComponent } from './components/form-commandr/form-commandr.
     RestofthedayComponent,
     ListCommandsComponent,
     FormCommandbComponent,
-    FormCommandrComponent
+    FormCommandrComponent,
+    RegisterComponent
   ],
   imports: [
     OrderModule,

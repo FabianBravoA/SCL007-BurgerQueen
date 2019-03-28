@@ -3,13 +3,12 @@ export interface CommandInterface{
   user?: string;
   nameClient?: string;
   tableNumber?: number;
-  timeProcess?: number;
+  timeProcess?: any;
   state?: boolean;
   products?: [{
     product?: string,
     price?: number,
-    idproducts?: string,
     quantity?: number
   }];
-  userUid?:string;
+  userUid?: string;
 }

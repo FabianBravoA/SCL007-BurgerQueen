@@ -14,7 +14,6 @@ export class BreakfeastComponent implements OnInit {
 
   ngOnInit() {
     this.dataApi.getAllCommands().subscribe(commands =>{
-      console.log('Comandas', commands);
       this.commands = commands;
     })
   }

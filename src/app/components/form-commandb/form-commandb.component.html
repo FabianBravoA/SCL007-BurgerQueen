@@ -5,10 +5,10 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Agrega o edita una comanda</h5>
                 </div>
-                <form name="commands" #formCommand="ngForm" (ngSubmit)="addCommand()">
+                <form name="commands" #formCommand="ngForm" (ngSubmit)="addCommand(commands)">
                 <div class="row">
                   <div class="col-6">
-                      <input type="hidden" name="id" >
+                      <input type="hidden" name="id">
                       <div class="form-group">
                         <label for="titulo" class="col-form-label">Nombre de Cliente:</label>
                         <input type="text" class="form-control" name="nameClient" [(ngModel)]="command.nameClient">

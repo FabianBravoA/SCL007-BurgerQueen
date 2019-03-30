@@ -1,0 +1,32 @@
+<section class="mt-5 pt-3">
+  <div class="init">
+      <h2 class="mt-5">Comandas</h2>
+      <div class="links mb-5">
+             <button type="button" class="btn btn-outline-danger">Todas</button>
+           | <button type="button" class="btn btn-outline-danger">Pendientes</button>
+           | <button type="button" class="btn btn-outline-danger">Realizadas</button>
+          <div class="search">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Buscar comanda" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+              </div>
+            </div>           
+          </div>
+      </div>
+  </div>    
+    <div class="row">
+        <div class="card-columns">
+            <div class="card center" *ngFor="let command of commands | orderBy:'order':true; i as index">
+              <h5 class="card-text">Nombre Cliente: {{command.nameClient}}</h5>
+              <p class="card-text">Número de Mesa: {{command.tableNumber}}</p>
+              <p class="card-text">Mesero: {{command.user}}</p>
+              <ul class="list-group list-group-flush" *ngFor="let g of command.products; let j = index">
+                <li class="list-group-item products">{{g.quantity}} - {{g.product}} - ${{g.price}}</li>
+              </ul>
+              <p>Total: </p>
+              <p class="card-text"><small class="text-muted">Ingresado el: {{command.date}}</small></p>
+            </div>
+        </div>
+    </div>
+  </section>

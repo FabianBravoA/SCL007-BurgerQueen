@@ -1,0 +1,41 @@
+.form-control.login-user {
+    border: 0 solid #fff !important;
+  }
+.background-index{
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    min-height: 100%;
+    position: fixed;
+    left: 0;
+    top:0;
+  }
+  .transparent{
+    background-color: rgba(255,255,255,.3);
+  }
+  .transparent-total{
+    background-color: rgba(255,255,255,0) !important;
+    border:none !important;
+  }
+  .space-developer{
+    width:100%;
+    min-height: 100px;
+  }
+  .space-developer img{
+    margin: 0 auto; 
+    display:block;
+  }
+  .hamburger{
+    background: -webkit-linear-gradient(#ffc107, #604c8d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:150px;
+    text-align:center;
+    color: tomato;  
+    margin: 0 auto; 
+    display: block;
+  }
+  .title{
+    font-weight: 600;
+    color: #604c8d;
+  }

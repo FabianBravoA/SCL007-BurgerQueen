@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  font-family: 'Dosis' !important;
+  background-position: center;
+  background-size: cover;
+  width:100%;
+  height:auto;
+  left: 0;
+  top:0; 
+  color:#333333 !important;
+}
+.transparent-developer{
+  background-color: #E09E5D  !important;
+  border: none !important;
+}
+.init{
+  margin: 0 auto;
+  display:block;
+  text-align:left;
+}
+.search{
+  float:right;
+}
+.btn-outline-danger{
+  color:#604c8d  !important;
+  border:none  !important;
+}
+.btn-outline-danger:hover {
+  border-bottom:1px solid  #604c8d  !important;
+  background-color: #fff !important;
+}
+.center{
+  text-align:center;
+  padding: 5px 0;
+}
+.card{
+  background-color: rgba(98, 74, 155, .1) !important;
+  border-color: rgba(98, 74, 155, .3) !important;
+}
+.products{
+  color: #604c8d;
+  font-weight: 600;
+  font-family: 'Quicksand';
+}
+.btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-danger.dropdown-toggle:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+.btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active, .show > .btn-outline-danger.dropdown-toggle {
+  color: #fff;
+  background-color:transparent !important;
+  border-color: transparent !important;
+}
+
+/* #604c8d violeta
+rgb(240, 240, 240) rosa
+#333333 gris
+*/
